@@ -1,15 +1,16 @@
 pkgname='python3-markdown-math'
 _pkgbasename=python-markdown-math
-pkgver=0.5
+pkgver=0.6
 pkgrel=1
+_index='78/e1/24021b30466ca2985352ec1f15b3cb38e0b62ba742c46820c33ddf7114a8'
 pkgdesc="Math extension for Python-Markdown"
 arch=('x86_64')
 url='http://pypi.python.org/pypi/python-markdown-math'
 license=('BSD')
 depends=('python3')
 makedepends=('python3')
-source=("https://pypi.python.org/packages/62/a0/721bb6542cf4b48d6016a79786fb6d68b7a1368ec89ee6e30377d578457d/$_pkgbasename-$pkgver.tar.gz")
-sha256sums=('8f8803c92ac0847d18bd82a51fdb6acec90b2b54a4990650e627a0d4d3a78445')
+source=("https://files.pythonhosted.org/packages/${_index}/${_pkgbasename}-${pkgver}.tar.gz")
+sha256sums=('c68d8cb9695cb7b435484403dc18941d1bad0ff148e4166d9417046a0d5d3022')
 
 package() {
   cd "$srcdir/$_pkgbasename-$pkgver"
