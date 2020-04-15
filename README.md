@@ -1,2 +1,2 @@
-# python3-markdown-math
+# python-markdown-math
 Math extension for Python-Markdown
