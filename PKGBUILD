@@ -1,7 +1,6 @@
 pkgname=python-markdown-math
-pkgver=0.6
+pkgver=0.8
 pkgrel=1
-_index='78/e1/24021b30466ca2985352ec1f15b3cb38e0b62ba742c46820c33ddf7114a8'
 pkgdesc="Math extension for Python-Markdown"
 arch=('x86_64')
 url='http://pypi.python.org/pypi/python-markdown-math'
@@ -11,10 +10,10 @@ makedepends=('python3')
 provides=('python3-markdown-math')
 replaces=('python3-markdown-math')
 conflicts=('python3-markdown-math')
-source=("https://files.pythonhosted.org/packages/${_index}/${pkgname}-${pkgver}.tar.gz")
-sha256sums=('c68d8cb9695cb7b435484403dc18941d1bad0ff148e4166d9417046a0d5d3022')
+source=("https://github.com/mitya57/${pkgname}/archive/refs/tags/${pkgver}.tar.gz")
+sha256sums=('e700cbc53a857f443a782cc95f6a4d8ba4a264b12b67c3328b2f4f2f4156273f')
 
 package() {
-  cd "${srcdir}/${pkgname}-${pkgver}"
-  python3 setup.py install --root="$pkgdir" --optimize=0
+	cd "${pkgname}-${pkgver}"
+	python3 setup.py install --root="$pkgdir" --optimize=0
 }
